@@ -1,4 +1,5 @@
 import React from 'react';
+import PopupOrderForm from './PopupOrderForm';
 
 const Total = ({ total, deliveryType }) => {
   const deliveryTitle = {
@@ -6,7 +7,6 @@ const Total = ({ total, deliveryType }) => {
     daytime: 'Доставим к определенному времени',
     evening: 'Доставим с 17:00 до 20:00, по городу до подъезда бесплатно',
   }[deliveryType];
-  // console.log(deliveryType, deliveryTitle);
   return (
     <div className="price">
       <div>
@@ -15,7 +15,7 @@ const Total = ({ total, deliveryType }) => {
       </div>
       <div className="payment-comment">{deliveryTitle}</div>
       <div className="order">
-        <a href="#order">Заказать</a>
+        <PopupOrderForm />
       </div>
     </div>
   );
